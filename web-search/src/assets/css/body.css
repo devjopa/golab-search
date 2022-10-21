@@ -1,0 +1,45 @@
+.wrapper {
+    padding: 2rem;
+}
+
+.wrapper .from {
+    margin-bottom: 0;
+    text-align: start;
+    color: #000;
+    font-weight: 500;
+    font-size: 0.6rem;
+}
+
+.wrapper .to {
+    margin-bottom: 0;
+    text-align: start;
+    color: #888;
+    font-size: .6rem;
+}
+
+.wrapper .body {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    text-align: justify;
+    overflow: auto;
+    height: calc(100vh - 14.6rem);
+}
+
+.wrapper .email {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.19);
+    padding-bottom: 1rem;
+}
+
+.wrapper .email .icon {
+    height: 3rem;
+    width: 3rem;
+    background-color: #002054;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wrapper .email .icon label {
+    color: #fff;
+    margin-top: 21%;
+}

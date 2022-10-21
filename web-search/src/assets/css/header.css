@@ -1,0 +1,21 @@
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: #002054;
+    display: flex;
+    align-items: center;
+}
+
+.header img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+    margin-left: 1rem;
+}
+
+.header label {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+}
