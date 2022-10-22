@@ -1,6 +1,6 @@
 <template>
-  <div class="wrapper" v-if="email !== ''">
-    <div class="row m-0 email">
+  <div class="wrapper" v-if="email.Body !== ''">
+    <div class="row m-0 email" >
       <div class="col-1" style="align-self: center;">
         <div class="icon">
           <label>{{ email.From[0] }}</label>

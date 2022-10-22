@@ -18,7 +18,7 @@ export default {
   },
   data: () => {
     return {
-      emailActive: ''
+      emailActive: {From: '', To:'', Body:'', Date:''}
     };
   },
   emits: ["loadMoreData", "showBody"],

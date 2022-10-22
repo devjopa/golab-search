@@ -16,7 +16,8 @@ export const getToken = async (payload) => {
 }
 
 export const searchEmailsByTerm = async (payload) => {
-    return await axios.get(`http://localhost:3100/api/search/${payload.term}-${payload.from}-${payload.maxResults}`)
+
+    return await axios.get(`${process.env.VUE_APP_URL_API}/search/${payload.term}-${payload.from}-${payload.maxResults}`)
     .then(({data}) => {
          return data;
     })

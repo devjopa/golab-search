@@ -33,13 +33,13 @@ export default {
   },
   data: () => {
     return {
-      email: ""
+      email: {From: '', To:'', Body:'', Date:''}
     };
   },
   methods: {
     async executeSearchByTerm(term) {
       this.$refs.childComponentRef.executeSearchByTerm(term);
-      this.email = ""
+      this.email = {From: '', To:'', Body:'', Date:''}
     },
     showBody(data) {
       this.email = data;
