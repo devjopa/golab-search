@@ -5,20 +5,20 @@
 .wrapper .from {
     margin-bottom: 0;
     text-align: start;
-    color: #000;
+    color: #002054;
     font-weight: 500;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
 }
 
 .wrapper .to {
     margin-bottom: 0;
     text-align: start;
     color: #888;
-    font-size: .6rem;
+    font-size: 0.7rem;
 }
 
 .wrapper .body {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     margin-bottom: 0;
     text-align: justify;
     overflow: auto;
