@@ -19,7 +19,8 @@ export default {
       searchTerm: "forecast",
       from: 0,
       maxResults: 10,
-      emails: []
+      emails: [],
+      totalRows: 100
     };
   },
   components: {
@@ -32,7 +33,7 @@ export default {
         from: this.from,
         maxResults: this.maxResults,
       });
-
+      this.totalRows = dataSearchApi.Hits.Total.Value;
       return dataSearchApi.Hits.Hits;
     },
     async executeSearchByTerm(term) {
@@ -44,8 +45,13 @@ export default {
 
     async loadMoreData() {
       this.from = this.from + this.maxResults + 1;
-      let newEmails = await this.loadData();
-      this.emails.push(...newEmails);
+      console.log("this.from", this.from);
+      console.log("this.from", this.totalRows);
+      if(this.from <= this.totalRows)
+      {
+        let newEmails = await this.loadData();
+        this.emails.push(...newEmails);
+      }
     },
 
     showBody(data) {

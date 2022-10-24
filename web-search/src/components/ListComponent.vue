@@ -35,7 +35,8 @@ export default {
     onMounted(() => {
       const listElm = document.querySelector('#infinite-list');
       listElm.addEventListener('scroll', () => {
-        if (listElm.scrollTop + listElm.clientHeight >= listElm.scrollHeight) {
+        let basePosition = listElm.scrollTop + listElm.clientHeight + 100;
+        if (basePosition >= listElm.scrollHeight) {
           context.emit("loadMoreData");
         }
       });
