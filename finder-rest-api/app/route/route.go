@@ -41,8 +41,8 @@ func New() *Route {
 func (ro *Route) initRoutes() {
 
 	ro.Router.Group(func(r chi.Router) {
-		// r.Use(jwtauth.Verifier(tokenAuth))
-		// r.Use(jwtauth.Authenticator)
+		r.Use(jwtauth.Verifier(tokenAuth))
+		r.Use(jwtauth.Authenticator)
 		r.Get("/api/search/{term}-{from}-{maxResults}", ro.CreateSearchHandler())
 	})
 

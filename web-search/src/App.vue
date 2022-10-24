@@ -4,12 +4,17 @@
 
 <script>
 
-//import { getToken } from "../services/index";
+import { getToken } from "../services/index";
 import HomeComponent from "./components/HomeComponent.vue";
 export default {
   name: "App",
   components: {
     HomeComponent,
+  },
+  async mounted(){
+    const tokenResponse = await getToken({ Username: process.env.VUE_APP_USER_API, Password:process.env.VUE_APP_PASS_API});
+    if(!tokenResponse.error)
+      localStorage.setItem("token", tokenResponse.token)
   }
 };
 </script>

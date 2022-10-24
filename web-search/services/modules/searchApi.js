@@ -6,7 +6,7 @@ import {axios} from '../axios/axios'
 * get access token
 */
 export const getToken = async (payload) => {
-   return await axios.post('http://localhost:3100/api/token',payload)
+   return await axios.post(`${process.env.VUE_APP_URL_API}/token`,payload)
    .then(({data}) => {
         return data;
    })
@@ -16,8 +16,12 @@ export const getToken = async (payload) => {
 }
 
 export const searchEmailsByTerm = async (payload) => {
-
-    return await axios.get(`${process.env.VUE_APP_URL_API}/search/${payload.term}-${payload.from}-${payload.maxResults}`)
+    let token = localStorage.getItem("token");
+    return await axios.get(`${process.env.VUE_APP_URL_API}/search/${payload.term}-${payload.from}-${payload.maxResults}`,{
+        headers: {
+                    Authorization: `Bearer ${token}`,
+            }
+        })
     .then(({data}) => {
          return data;
     })

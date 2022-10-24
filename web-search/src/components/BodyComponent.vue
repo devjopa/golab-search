@@ -18,6 +18,14 @@
       <p> {{ email.Body }}</p>
     </div>
   </div>
+  <div class="wrapper" v-if="email.Body === ''">
+    <div style="margin-top:15rem">
+      <img src="../assets/instructions.png" class="img-size"/>
+    </div>
+    <div class="label-information">
+      <label>Please select email row to show body information...</label>
+    </div>
+  </div>
 </template>
 <script>
 export default {

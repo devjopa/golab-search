@@ -3,7 +3,7 @@
     <div class="row m-0">
       <div class="col-2" style="align-self: center;">
         <div class="icon">
-          <label>{{ email._source.From[0] }}</label>
+          <label>{{ email._source.From[0].toUpperCase() }}</label>
         </div>
       </div>
       <div class="col " style="align-self: center;">

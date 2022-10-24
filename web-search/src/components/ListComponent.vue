@@ -1,7 +1,14 @@
 <template>
   <div class="scrolling-component" id="infinite-list" style="height: calc(100vh - 12.1rem); overflow: auto;">
-    <Email v-for="email in emails" :emailActive="emailActive" :email="email" :key="email._id" @showBody="showBody" />
+    <div v-if="emails.length == 0" style="margin-top:10rem">
+      <img src="../assets/no_email.png" class="img-size" />
+    </div>
+    <div v-if="emails.length == 0" class="label-information">
+      <label>No records found...</label>
+    </div>
+      <Email v-for="email in emails" :emailActive="emailActive" :email="email" :key="email._id" @showBody="showBody" />
   </div>
+
 </template>
 
 <script>
@@ -58,3 +65,7 @@ export default {
   }
 };
 </script>
+
+<style src="@/assets/css/listComponent.css">
+
+</style>
