@@ -45,8 +45,7 @@ export default {
 
     async loadMoreData() {
       this.from = this.from + this.maxResults + 1;
-      console.log("this.from", this.from);
-      console.log("this.from", this.totalRows);
+
       if(this.from <= this.totalRows)
       {
         let newEmails = await this.loadData();
