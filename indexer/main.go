@@ -15,8 +15,6 @@ func main() {
 		return
 	}
 
-	// Ver el tema asincrono para que sea mas rapido
-	// Ver el tema de log y documentacion
 	path := helpers.GetRunningDirectory(args[0])
 	if helpers.ValidateDirectory(path) {
 		helpers.SearchFolderStructure(path)
