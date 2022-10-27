@@ -1,10 +1,5 @@
 import {axios} from '../axios/axios'
-/**
-*
-* @param {Object} payload
-*
-* get access token
-*/
+
 export const getToken = async (payload) => {
    return await axios.post(`${process.env.VUE_APP_URL_API}/token`,payload)
    .then(({data}) => {

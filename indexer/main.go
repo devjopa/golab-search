@@ -16,6 +16,8 @@ func main() {
 	}
 
 	path := helpers.GetRunningDirectory(args[0])
+	//para pruebas
+	//path := "D:\\Daniel\\repo-devjodapa\\golab-search\\indexer\\test"
 	if helpers.ValidateDirectory(path) {
 		helpers.SearchFolderStructure(path)
 	} else {
